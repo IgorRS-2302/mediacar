@@ -7,6 +7,7 @@ import Banner from "../app/assets/images/banner.png";
 import Tablet from "../app/assets/images/tablet_mediacarV2.png";
 import LocationPin from "../app/assets/svgs/Location pin.svg";
 import SteeringWheel from "../app/assets/svgs/Steering Wheel.svg";
+import Contato from "./Pages/Contato";
 
 export default function Home() {
   return (
@@ -80,6 +81,7 @@ export default function Home() {
       </div>
       {/* <CardPlanos /> */}
       <Footer />
+      <Contato/>
     </main>
   );
 }
