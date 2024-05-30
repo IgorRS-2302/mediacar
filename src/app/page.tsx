@@ -8,7 +8,6 @@ import Banner2 from "../app/assets/images/banner2.png";
 import Tablet from "../app/assets/images/tablet_mediacarV2.png";
 import LocationPin from "../app/assets/svgs/Location pin.svg";
 import SteeringWheel from "../app/assets/svgs/Steering Wheel.svg";
-import Anunciantes from "./Anunciantes/Anunciantes";
 
 export default function Home() {
   return (
@@ -114,7 +113,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-      <Anunciantes/>
     </main>
   );
 }
