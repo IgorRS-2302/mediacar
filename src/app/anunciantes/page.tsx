@@ -12,11 +12,11 @@ export default function Anunciantes() {
     <div className=' min-h-screen flex-col items-center justify-between w-full'>
       <Header/>
       <div>
-        <div className='absolute top-40 left-1 text-white'>
-          <h1 className='text-4xl max-w-[50%] font-bold ml-5'> Atraia a atenção do seu público-alvo.</h1>
+        <div className='absolute top-[15rem] right-1 text-white '>
+          <h1 className='text-4xl font-bold ml-5'> Atraia a atenção do seu público-alvo.</h1>
           <h3 className='text-xl ml-5 mt-2'>Anuncie conosco na MediaCar!</h3>
         </div>
-      <Image src={Banner2} alt={""} className='object-fill w-full max-h-[50vh]'/>
+      <Image src={Banner2} alt={""} className='object-fill w-full max-h-[80vh]'/>
 
         <h2 className='text-2xl text-center text-black my-8 font-bold'>PRESS KIT</h2>
         <div className='grid grid-flow-col grid-cols-2 max-w-[90%]'>
