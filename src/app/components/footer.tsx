@@ -19,8 +19,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between py-5 gap-10">
-          <div className="flex justify-between w-3/5 lg:w-5/12">
+        <div className="grid grid-col py-5 gap-10 md:flex ">
+          <div className="flex justify-around md:w-3/5 lg:w-5/12">
             <div className="flex flex-col gap-1">
               <span className="font-semibold pb-2">Produtos</span>
               <span>Nossos planos</span>
@@ -40,7 +40,7 @@ export default function Footer() {
               <span>Fale conosco</span>
             </div>
           </div>
-          <div className="flex justify-center items-center w-2/5">
+          <div className="flex justify-center items-center md:w-2/5 max">
             <div className="flex items-center gap-3 bg-gradient-to-b from-orange-700 to-orange-800 py-2 px-4 rounded-md cursor-pointer">
               <WhatsAppIcon fontSize="large" />
               <div className="flex flex-col">

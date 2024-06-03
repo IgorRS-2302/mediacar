@@ -3,11 +3,12 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Image from "next/image";
 import Tablet from "../assets/images/tablet_mediacarV2.png";
+
 export default function Contato() {
   return (
-    <div>
+    <div className="text-white">
       <Header />
-      <div className="grid grid-flow-col grid-cols-2 bg-white">
+      <div className="md:grid grid-flow-col grid-cols-2 bg-white">
         <div className="flex flex-grow-1 flex-col gap-5 align-middle justify-center text-black mx-10 p-12">
           <h1 className="text-3xl">Contate-nos</h1>
           <h3 className="">
@@ -45,8 +46,8 @@ export default function Contato() {
             </button>
           </div>
         </div>
-        <div className="flex items-center align-middle justify-center">
-          <Image src={Tablet} alt={""} />
+        <div className="invisible md:visible flex items-center align-middle justify-center w-[90%]">
+          <Image src={Tablet} alt={""} className="object-fill " />
         </div>
       </div>
       <Footer />
