@@ -101,7 +101,7 @@ export default function Home() {
         <Image
           src={Banner2}
           alt={"Banner mediacar"}
-          className="object-fill w-full max-h-[60vh]"
+          className="object-fill w-full max-h-[80vh]"
         />
         <div className="spans absolute top-52 left-72 flex flex-col items-center gap-5">
           <span className="text-5xl w-3/4 text-center ">
