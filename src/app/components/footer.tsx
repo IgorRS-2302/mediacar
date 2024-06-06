@@ -1,21 +1,20 @@
 import Image from "next/image";
 import Logo from "../assets/svgs/logo_mediacar.svg";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-orange-500 from-40% orange-600 to-orange-700 w-full md:px-32 py-2">
       <div>
-        <div className="flex justify-between border-b-2 border-b-white p-5">
+        <div className="flex justify-between items-center border-b-2 border-b-white p-5">
           <Image src={Logo} alt={"Logo mediacar"} width={120} />
           <div className="flex">
             <span>Acompanhe nas redes</span>
-            <div>
-              <span>*</span>
-              <span>*</span>
-              <span>*</span>
-              <span>*</span>
-              <span>*</span>
+            <div className="mx-2">
+              <a href="https://www.instagram.com/mediacar1.1/" target="_blank">
+                <InstagramIcon />
+              </a>
             </div>
           </div>
         </div>
@@ -40,13 +39,15 @@ export default function Footer() {
               <span>Fale conosco</span>
             </div>
           </div>
-          <div className="flex justify-center items-center md:w-2/5 max">
+          <div className="flex justify-end items-center md:w-2/5 max">
             <div className="flex items-center gap-3 bg-gradient-to-b from-orange-700 to-orange-800 py-2 px-4 rounded-md cursor-pointer">
               <WhatsAppIcon fontSize="large" />
-              <div className="flex flex-col">
-                <span>Atendimento Whatsapp:</span>
-                <span>{"(81) 998417840"}</span>
-              </div>
+              <a href="https://wa.me/5581988417840" target="_blank">
+                <div className="flex flex-col">
+                  <span>Atendimento Whatsapp:</span>
+                  <span>{"(81) 99841-7840"}</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

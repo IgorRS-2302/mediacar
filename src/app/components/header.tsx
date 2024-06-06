@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
-import MediacarLogo from "../assets/svgs/logo_mediacar.svg";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import MediacarLogo from "../assets/svgs/logo_mediacar.svg";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Button, Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
 
 export default function Header() {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -38,9 +40,38 @@ export default function Header() {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Contato</MenuItem>
-        <MenuItem onClick={handleClose}>Motorista</MenuItem>
-        <MenuItem onClick={handleClose}>Anunciante</MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose;
+            router.push("/contato");
+          }}
+        >
+          Contato
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose;
+            router.push("/motorista");
+          }}
+        >
+          Motorista
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose;
+            router.push("/anunciantes");
+          }}
+        >
+          Anunciante
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose;
+            router.push("/demonstracao");
+          }}
+        >
+          Demonstração
+        </MenuItem>
       </Menu>
       <Link href={"/"}>
         <Image src={MediacarLogo} alt={"Logo mediacar"} width={150} />
