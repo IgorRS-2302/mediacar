@@ -1,5 +1,7 @@
+"use client";
 import { ArrowForwardRounded } from "@mui/icons-material";
 import { Button } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 interface ICardData {
   title: string;
@@ -14,6 +16,8 @@ export default function CardPlanos({
   description,
   listItem,
 }: ICardData) {
+  const router = useRouter();
+
   return (
     <div className="grid bg-gradient-to-br from-orange-500 from-40% orange-600 to-orange-700 p-5 rounded-md w-screen">
       <div className="mx-auto text-white h-1/12">
@@ -48,6 +52,9 @@ export default function CardPlanos({
           size="large"
           className="bg-white hover:bg-slate-50 text-orange-700 capitalize w-full"
           endIcon={<ArrowForwardRounded />}
+          onClick={() => {
+            router.push("/anunciantes");
+          }}
         >
           <span>Contratar agora</span>
         </Button>

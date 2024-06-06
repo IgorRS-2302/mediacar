@@ -1,15 +1,18 @@
+"use client";
 import CardPlanos from "./components/cardPlanos";
 import { Button, Divider } from "@mui/material";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Image from "next/image";
 import Banner from "../app/assets/images/banner.png";
-import Banner2 from "../app/assets/images/banner2.png";
 import Tablet from "../app/assets/images/tablet_mediacarV2.png";
 import LocationPin from "../app/assets/svgs/Location pin.svg";
 import SteeringWheel from "../app/assets/svgs/Steering Wheel.svg";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between text-white">
       <Header />
@@ -40,8 +43,11 @@ export default function Home() {
             inovação
           </span>
         </div>
-        <Button className="bg-gradient-to-b from-orange-600 to-orange-700 text-white py-3 px-5 rounded-full">
-          Conheça nossos planos
+        <Button
+          className="bg-gradient-to-b from-orange-600 to-orange-700 text-white py-3 px-5 rounded-full"
+          onClick={() => router.push("/demonstracao")}
+        >
+          Ver demonstração
         </Button>
       </div>
       <div className="product text-black py-10 px-32">
@@ -55,10 +61,10 @@ export default function Home() {
             </span>
             <Image src={LocationPin} alt={""} width={75} />
             <span className="text-center w-2/3">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-              vero dolorum unde harum, ipsum nisi perspiciatis eaque cum quia
-              excepturi corporis quaerat ab, dolor animi libero quam odit
-              inventore quod.
+              Sua marca diante de um público bem diversificado e com baixa
+              dispersão. Sua marca nos carros, ela não fica parada atingindo
+              somente aquela área, atinge locais além do seu alcance, alcançando
+              um público e visibilidade muito maior.
             </span>
           </div>
           <Divider orientation="vertical" variant="middle" flexItem />
@@ -66,16 +72,16 @@ export default function Home() {
             <span className="text-lg">Benefícios para o motorista</span>
             <Image src={SteeringWheel} alt={""} width={75} />
             <span className="text-center w-2/3">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-              vero dolorum unde harum, ipsum nisi perspiciatis eaque cum quia
-              excepturi corporis quaerat ab, dolor animi libero quam odit
-              inventore quod.
+              Para nossos parceiros motoritas temos várias vantagens e
+              benefícios. Temos uma Remuneração Mensal + Valor por indicação,
+              recebendo na hora da efetivação. Desconto em serviços automotivos
+              e peças. Direito a um clube de Benefícios.
             </span>
           </div>
         </div>
       </div>
       <div className="planos bg-stone-100 text-black w-full">
-        <div className="flex flex-col items-center gap-10 py-10 px-32">
+        <div className="flex flex-col items-center gap-10 py-10">
           <span className="text-xl font-semibold">PLANOS</span>
           <div className="flex gap-10 w-full p-10">
             <CardPlanos title={"Plano 1"} price={70} listItem={["Relação"]} />
@@ -97,19 +103,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="banner w-full relative">
-        <Image
-          src={Banner2}
-          alt={"Banner mediacar"}
-          className="object-fill w-full max-h-[80vh]"
-        />
-        <div className="spans absolute top-52 left-72 flex flex-col items-center gap-5">
-          <span className="text-5xl w-3/4 text-center ">
-            Já são mais de 239.950 pessoas utilizando nossos serviços.
-          </span>
-          <span className="font-thin text-4xl">
-            Venha fazer parte você também!
-          </span>
+      <div className="banner w-full bg-gradient-to-br from-gray-500 from-23% gray-600 to-black p-24">
+        <div className="spans flex justify-evenly items-center text-2xl">
+          <p className="text-center">
+            Já temos mais de 100 motoristas <br />
+            cadastrados
+          </p>
+          <p className="text-center">50+ marcas anunciando conosco</p>
+          <p className="text-center">Mais 200 anúncios feitos</p>
         </div>
       </div>
       <Footer />

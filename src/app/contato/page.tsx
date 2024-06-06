@@ -8,7 +8,7 @@ export default function Contato() {
   return (
     <div className="text-white">
       <Header />
-      <div className="md:grid grid-flow-col grid-cols-2 bg-white">
+      <div className="md:grid grid-flow-col grid-cols-2 bg-white pt-14">
         <div className="flex flex-grow-1 flex-col gap-5 align-middle justify-center text-black mx-10 p-12">
           <h1 className="text-3xl">Contate-nos</h1>
           <h3 className="">
@@ -32,16 +32,11 @@ export default function Contato() {
           />
           <input
             type="text"
-            placeholder="Empresa"
+            placeholder="Cidade-UF"
             className="py-2 pl-3 bg-cor-input rounded-lg"
           />
-          <input
-            type="text"
-            placeholder="Site"
-            className=" py-2 pl-3 bg-cor-input rounded-lg"
-          />
           <div className="flex justify-end">
-            <button className="bg-cor-laranja py-3 px-12 rounded-lg">
+            <button className="bg-cor-laranja py-3 px-12 rounded-lg text-white">
               Enviar
             </button>
           </div>
