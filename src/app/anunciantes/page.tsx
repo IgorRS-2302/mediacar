@@ -26,11 +26,14 @@ export default function Anunciantes() {
           </div>
           <div className='flex flex-col justify-around h-[100%] items-center text-black font-bold '>
             <p className= 'text-md md:text-xl'>Alcance novos clientes e impulsione seu negócio conosco.</p>
-            <Image src={kit} alt='kit' className='max-w-20'/>
-            <p>Baixe o nosso Press Kit</p>
+            <Image src={kit} alt='kit' className='max-w-[13vh] py-5'/>
+            <p className='text-lg'>Baixe o nosso Press Kit</p>
           </div>
         </div>
-          <h2 className='text-center text-xl text-black font-bold my-5'>Perguntas Frequentes</h2>
+          <h2 className='text-center text-2xl text-black font-bold my-5'>Perguntas Frequentes</h2>
+      </div>
+      <div className='h-[70vh]'>
+
       </div>
       <Footer/>
     </div>
